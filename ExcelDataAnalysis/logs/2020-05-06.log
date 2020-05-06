@@ -1,0 +1,11 @@
+2020-05-06 16:26:30,343 - mylog - INFO - 正在遍历文件：F:\项目\ExcelDataAnalysis\files\test1.xlsx
+2020-05-06 16:26:30,464 - mylog - INFO - 正在遍历文件：F:\项目\ExcelDataAnalysis\files\test2.xlsx
+2020-05-06 16:26:30,492 - mylog - INFO - 正在遍历文件：F:\项目\ExcelDataAnalysis\files\test3.xlsx
+2020-05-06 16:26:30,517 - mylog - INFO - 正在遍历文件：F:\项目\ExcelDataAnalysis\files\test4.xlsx
+2020-05-06 16:26:30,543 - mylog - INFO - 正在遍历文件：F:\项目\ExcelDataAnalysis\files\test5.xlsx
+2020-05-06 16:26:43,110 - mylog - INFO - 正在遍历文件：F:\项目\ExcelDataAnalysis\files\test1.xlsx
+2020-05-06 16:26:43,164 - mylog - INFO - 正在遍历文件：F:\项目\ExcelDataAnalysis\files\test2.xlsx
+2020-05-06 16:26:43,190 - mylog - INFO - 正在遍历文件：F:\项目\ExcelDataAnalysis\files\test3.xlsx
+2020-05-06 16:26:43,217 - mylog - INFO - 正在遍历文件：F:\项目\ExcelDataAnalysis\files\test4.xlsx
+2020-05-06 16:26:43,245 - mylog - INFO - 正在遍历文件：F:\项目\ExcelDataAnalysis\files\test5.xlsx
+2020-05-06 16:30:30,682 - mylog - INFO - 输入的路径有误！
