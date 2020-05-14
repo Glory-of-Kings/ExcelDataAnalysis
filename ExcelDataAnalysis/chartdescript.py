@@ -34,7 +34,7 @@ def print_wordcloud(text):
     wordcloud = WordCloud(font_path="C:/Windows/Fonts/simfang.ttf",
                           mask=mask_pic).generate(text)
     image = wordcloud.to_image()
-    image.save('wordcloud.jpg');
+    image.save('wordcloud.jpg')
     return image
 
 #4.把词云图输出到excel中

@@ -8,6 +8,7 @@ descript:程序入口
 import sys
 from excelgetdatas import *
 import charttop5levelratio
+from chartdescript import *
 
 
 if __name__ == "__main__":
