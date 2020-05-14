@@ -7,6 +7,7 @@ descript:程序入口
 
 import sys
 from excelgetdatas import *
+import charttop5levelratio
 
 
 if __name__ == "__main__":
@@ -19,7 +20,14 @@ if __name__ == "__main__":
     rows = get_all_excel_data(directory)
 
     # 2.对问题的处理人，做数据分析，输出柱形图 ------ 高国栋
+
+
+    # 4.对问题反馈人(Top5)反馈的问题评级占比分析，输出柱形图 ------ 江坚
+    dadaist = charttop5levelratio.data_create(rows)
+    charttop5levelratio.draw_top5(dadaist)
+
 	
-	#5.对问题描述，做数据分析，输出词云图 ------ 丁小永
+	  # 5.对问题描述，做数据分析，输出词云图 ------ 丁小永
     get_wordcloud()
+
 

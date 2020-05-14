@@ -33,5 +33,11 @@ def get_all_excel_data(directory):
                         row = excelop.get_row_value(i)
                         rows.append(row)
                         worksheet.append(row)
+                str1 = src[:src.index('\\files')] + "\\total.xlsx"
+                str2 = src[:src.index('\\files')] + "\\drawTop5.xlsx"
+                if os.path.exists(str1):
+                    os.remove(str1)
+                if os.path.exists(str2):
+                    os.remove(str2)
     workbook.save("total.xlsx")
     return rows
