@@ -19,3 +19,7 @@ if __name__ == "__main__":
     rows = get_all_excel_data(directory)
 
     # 2.对问题的处理人，做数据分析，输出柱形图 ------ 高国栋
+	
+	#5.对问题描述，做数据分析，输出词云图 ------ 丁小永
+    get_wordcloud()
+
