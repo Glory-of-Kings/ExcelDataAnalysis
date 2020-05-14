@@ -31,6 +31,45 @@ print(ws['A1'].value) #A1表示法
 print(ws.cell(1,1).value) #坐标表示法
 print([sh['b14'].value for sh in wb.worksheets]) #打印说有工作表的b14，前面加个sum可求和
 
+#获取单元格区域数据
+ws['A1':'F3']
+ws['A1:F3'] #此方法读取的是行数据
+for row in ws['A1:F3']:
+    for c in row: #row行数据
+        print(c) #c单元格数据
+
+ ws['1':'3']
+ ws['1:3'] #此方法读取的是已使用的行数据
+ for row in ws['1:3']:
+    for c in row: #row行数据
+        print(c) #c单元格数据
+
+ws['a':'f']
+ws['a:f'] #此方法读取的是已使用的列数据
+ for clo in ws['a:f']
+    for c in col #col行数据
+        print(c) #c单元格数据
+
+list(workbook.worksheets[索引值].values) #获取（按行）指定工作表所有已用的数据
+print(list(ws.value)[1:4])
+
+
+print(['%s-%d'%(row[0].value ,sum(([c.value for c in row])[1:])) for row in rngs])
+
+#获取工作表中指定区域的数据
+worksheet.columns      #按列获取工作表指定区域
+worksheet.rows         #按按行获取工作表指定区域
+worksheet.min_row      #获取工作表最小行号
+worksheet.min_column   #获取工作表最小列号
+worksheet.max_row      #获取工作表最大行号
+worksheet.max_column   #获取工作表最大列号
+cell.row               #获取单元格行号
+cell.column            #获取单元格列号
+worksheet.iter_rows(x,x,x,x)
+worksheet.iter_cols(x,x,x,x)
+#按行获取指定工作表单元格区域，可以通过min_row、min_column、max_row、max_column这几个参数对单元格区域进行控制
+
+
 
 
 ```
