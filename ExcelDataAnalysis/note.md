@@ -1,11 +1,12 @@
-## base
+## xxxxx
 ```python
 #新建保存读取工作簿
 wb = openpyxl.Workbook() #新建工作簿 W大写
 wb.save('我的工作簿.xlsx') #保存工作簿
 # 每次创建默认会存在一个worksheet，也可以自行创建更多的worksheet
 wb.openpyxl.load_workbook('filename') #读取工作簿
-
+```
+```python
 #获取工作表
 workbook.active #获取当前活动的工作表
 workbook.worksheets[i] #以索引的方式获取工作表
@@ -24,7 +25,8 @@ wb.copy_worksheet(wb['工资表']).title = '工资表1月' #在复制表的同�
 
 #删除工作表
 wb.remove(工作表对象) #参数必须时工作表对象，参考复制工作表，同样需要save
-
+```
+```python
 #获取单元格
 ws = wb.worksheet[0]
 print(ws['A1'].value) #A1表示法
@@ -49,7 +51,8 @@ ws['a:f'] #此方法读取的是已使用的列数据
  for clo in ws['a:f']
     for c in col #col行数据
         print(c) #c单元格数据
-
+```
+```python
 list(workbook.worksheets[索引值].values) #获取（按行）指定工作表所有已用的数据
 print(list(ws.value)[1:4])
 
@@ -71,8 +74,8 @@ worksheet.iter_cols(x,x,x,x)
 
 
 
-
 ```
+
 
 
 

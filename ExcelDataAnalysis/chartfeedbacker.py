@@ -24,20 +24,21 @@ def get_feedbacker_chart():
         else:
             dic.setdefault(name[0],1)
         #print(name[0],name[1])
-    ss = wb.create_sheet()
-    ss.title = 'temp_feedbacker'
+    
+    ts = wb.create_sheet() #创建临时表
+    ts.title = 'temp_feedbacker'
     #print(dic.items())
     list_dic = sorted(dic.items(), key=lambda x:x[1],reverse=True )
     #print(listt)
-    ss.append(['姓名','次数'])
+    ts.append(['姓名','次数'])
     for k in list_dic:
-        ss.append([k[0],k[1]])
+        ts.append([k[0],k[1]])
         logger.info([k[0],k[1]])
-    add_chart(wb,ss,ws)
+    add_chart(wb,ts,ws)
 
     
 
-def add_chart(wb,ss,ws):
+def add_chart(wb,ts,ws):
     chart1 = BarChart()
     chart1.type = "col"
     chart1.style = 10
@@ -45,11 +46,12 @@ def add_chart(wb,ss,ws):
     chart1.y_axis.title = '次数'
     chart1.x_axis.title = '姓名'
     
-    data = Reference(ss, min_col=2, min_row=1,max_row=ss.max_row,max_col=2 )
-    cats = Reference(ss, min_col=1, min_row=2,max_col=1, max_row=ss.max_row)
+    data = Reference(ts, min_col=2, min_row=1,max_row=ts.max_row,max_col=2 )
+    cats = Reference(ts, min_col=1, min_row=2,max_col=1, max_row=ts.max_row)
     chart1.add_data(data, titles_from_data=True)
     chart1.set_categories(cats)
     str = 'B{0}'.format(ws.max_row+10)
     ws.add_chart(chart1,str)
     wb.save(PATH + '/total.xlsx')
 
+get_feedbacker_chart()
