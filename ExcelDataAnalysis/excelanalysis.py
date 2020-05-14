@@ -27,7 +27,7 @@ if __name__ == "__main__":
     charttop5levelratio.draw_top5(dadaist)
 
 	
-	  # 5.对问题描述，做数据分析，输出词云图 ------ 丁小永
+	# 5.对问题描述，做数据分析，输出词云图 ------ 丁小永
     get_wordcloud()
 
 
