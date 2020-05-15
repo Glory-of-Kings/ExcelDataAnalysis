@@ -1,0 +1,5 @@
+2020-05-14 15:39:54,070 - mylog - INFO - 正在遍历文件：D:\python\ExcelDataAnalysis\ExcelDataAnalysis\files\test1.xlsx
+2020-05-14 15:39:54,100 - mylog - INFO - 正在遍历文件：D:\python\ExcelDataAnalysis\ExcelDataAnalysis\files\test2.xlsx
+2020-05-14 15:39:54,114 - mylog - INFO - 正在遍历文件：D:\python\ExcelDataAnalysis\ExcelDataAnalysis\files\test3.xlsx
+2020-05-14 15:39:54,122 - mylog - INFO - 正在遍历文件：D:\python\ExcelDataAnalysis\ExcelDataAnalysis\files\test4.xlsx
+2020-05-14 15:39:54,130 - mylog - INFO - 正在遍历文件：D:\python\ExcelDataAnalysis\ExcelDataAnalysis\files\test5.xlsx
