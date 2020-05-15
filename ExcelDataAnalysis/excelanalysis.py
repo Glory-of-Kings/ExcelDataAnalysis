@@ -11,6 +11,7 @@ import charttop5levelratio
 from chartdescript import *
 
 
+
 if __name__ == "__main__":
     directory = input("请输入文件夹路径：")
     if len(directory) == 0:

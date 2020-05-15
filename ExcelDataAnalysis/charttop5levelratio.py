@@ -1,7 +1,9 @@
 '''
 对问题反馈人(Top5)反馈的问题评级占比分析，输出柱形图 ------ 江坚
 '''
-import xlsxwriter
+
+import openpyxl
+from openpyxl.chart import BarChart, Series, Reference
 
 
 def data_create(dateResource):
@@ -44,6 +46,8 @@ def data_create(dateResource):
         b1 = 5
     else:
         b1 = len(a1)
+    list0 = ["姓名", "A", "B", "C", "D"]
+    dadaist.append(list0)
     for m in range(0, b1):
         listrange = [a1[m][0], jxx_dicta.get(a1[m][0]), jxx_dictb.get(a1[m][0]), jxx_dictc.get(a1[m][0]),
                      jxx_dictd.get(a1[m][0])]
@@ -52,55 +56,26 @@ def data_create(dateResource):
 
 
 def draw_top5(dadaist):
-    # 新建一个excel文件，起名为drawChart1.xlsx
-    workbook = xlsxwriter.Workbook("drawTop5.xlsx")
-    # 添加一个Sheet页，不添写名字，默认为Sheet1
-    worksheet = workbook.add_worksheet()
-    # 准备数据
-    headings = ["姓名", "A", "B", "C", "D"]
-    # data = [["板面张", 78, 60], ["糖人李", 98, 89], ["炸糕徐", 88, 100]]
-    data = dadaist
-    # 样式
-    head_style = workbook.add_format({"bold": True, "bg_color": "yellow", "align": "center", "font": 13})
-    # 写数据
-    worksheet.write_row("A1", headings, head_style)
-    for i in range(0, len(data)):
-        worksheet.write_row("A{}".format(i + 2), data[i])
-    # 添加柱状图
-    chart1 = workbook.add_chart({"type": "column"})
-    chart1.add_series({
-        "name": "=Sheet1!$B$1",  # 图例项
-        "categories": "=Sheet1!$A$2:$A$6",  # X轴 Item名称
-        "values": "=Sheet1!$B$2:$B$6",  # X轴Item值
-        'column': {'color': 'red'},  # 图表颜色
-    })
-    chart1.add_series({
-        "name": "=Sheet1!$C$1",
-        "categories": "=Sheet1!$A$2:$A$6",
-        "values": "=Sheet1!$C$2:$C$6",
-        'column': {'color': 'yellow'},  # 图表颜色
-    })
-    chart1.add_series({
-        "name": "=Sheet1!$D$1",
-        "categories": "=Sheet1!$A$2:$A$6",
-        "values": "=Sheet1!$D$2:$D$6",
-        'column': {'color': 'blue'},  # 图表颜色
-    })
-    chart1.add_series({
-        "name": "=Sheet1!$E$1",
-        "categories": "=Sheet1!$A$2:$A$6",
-        "values": "=Sheet1!$E$2:$E$6",
-        'column': {'color': 'black'},  # 图表颜色
-    })
-    # 添加柱状图标题
-    chart1.set_title({"name": "Top5反馈评级数"})
-    # Y轴名称
-    chart1.set_y_axis({"name": "数量"})
-    # X轴名称
-    chart1.set_x_axis({"name": "人名"})
-    # 图表样式
-    chart1.set_style(11)
-    # 插入图表
-    worksheet.insert_chart("B10", chart1)
-    # 关闭EXCEL文件
-    workbook.close()
+    wb = openpyxl.load_workbook("total.xlsx")
+    sheets = wb.get_sheet_names()
+    ws = wb.create_sheet(title="top5", index=len(sheets))
+    rows = dadaist
+
+    for row in rows:
+        ws.append(row)
+
+    chart1 = BarChart()
+    chart1.type = "col"
+    chart1.style = 10
+    chart1.title = "Top5反馈评级数"
+    chart1.y_axis.title = '数量'
+    chart1.x_axis.title = '人名'
+
+    data = Reference(ws, min_col=2, min_row=1, max_row=len(rows), max_col=len(rows[0]))
+    cats = Reference(ws, min_col=1, min_row=2, max_row=len(rows))
+    chart1.add_data(data, titles_from_data=True)
+    chart1.set_categories(cats)
+    chart1.shape = 4
+    ws.add_chart(chart1, "A10")
+
+    wb.save("total.xlsx")
