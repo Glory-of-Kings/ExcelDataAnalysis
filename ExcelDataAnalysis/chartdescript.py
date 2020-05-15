@@ -7,7 +7,7 @@ from wordcloud import WordCloud
 import jieba
 import numpy
 import PIL.Image as Image
-import xlsxwriter
+from openpyxl.drawing.image import Image as IM
 
 from exceloperator import *
 from loggerhelper import *
@@ -39,10 +39,27 @@ def print_wordcloud(text):
 
 #4.把词云图输出到excel中
 def output_wordcloud():
-    book = xlsxwriter.Workbook('wordcloud.xlsx')
-    sheet = book.add_worksheet('wordcloud')
-    sheet.insert_image('D4', 'wordcloud.jpg')
-    book.close()
+    wb =  load_workbook("total.xlsx")
+
+    if "wordcloud" in wb.sheetnames:
+        sheet = wb.get_sheet_by_name("wordcloud")
+    else:
+        sheet = wb.create_sheet("wordcloud")
+
+    # 设置文字图片单元格的行高列宽
+    column_width = 12.25
+    row_height = 80.10
+
+    sheet.column_dimensions['D'].width = column_width
+    sheet.row_dimensions[3].height = row_height
+
+    img = IM('wordcloud.jpg')
+    newsize = (360, 360)
+    img.width, img.height = newsize
+
+    sheet.add_image(img, 'D3')
+    wb.save("total.xlsx")  # 保存
+
 
 #if __name__ == "__main__":
 def get_wordcloud():

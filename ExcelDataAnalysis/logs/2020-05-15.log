@@ -1,0 +1,5 @@
+2020-05-15 09:54:13,947 - mylog - INFO - 正在遍历文件：D:\code\gitCode\tools\ExeclDataAnalysis\ExcelDataAnalysis\ExcelDataAnalysis\files\test1.xlsx
+2020-05-15 09:54:13,966 - mylog - INFO - 正在遍历文件：D:\code\gitCode\tools\ExeclDataAnalysis\ExcelDataAnalysis\ExcelDataAnalysis\files\test2.xlsx
+2020-05-15 09:54:13,982 - mylog - INFO - 正在遍历文件：D:\code\gitCode\tools\ExeclDataAnalysis\ExcelDataAnalysis\ExcelDataAnalysis\files\test3.xlsx
+2020-05-15 09:54:13,998 - mylog - INFO - 正在遍历文件：D:\code\gitCode\tools\ExeclDataAnalysis\ExcelDataAnalysis\ExcelDataAnalysis\files\test4.xlsx
+2020-05-15 09:54:14,017 - mylog - INFO - 正在遍历文件：D:\code\gitCode\tools\ExeclDataAnalysis\ExcelDataAnalysis\ExcelDataAnalysis\files\test5.xlsx

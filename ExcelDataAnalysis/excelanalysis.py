@@ -7,6 +7,7 @@ descript:程序入口
 
 import sys
 from excelgetdatas import *
+from chartdescript import *
 
 
 if __name__ == "__main__":
@@ -21,5 +22,5 @@ if __name__ == "__main__":
     # 2.对问题的处理人，做数据分析，输出柱形图 ------ 高国栋
 	
 	#5.对问题描述，做数据分析，输出词云图 ------ 丁小永
-    get_wordcloud()
+   # get_wordcloud()
 
