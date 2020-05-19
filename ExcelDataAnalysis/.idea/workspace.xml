@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6c6586bf-c5b9-4985-b371-9daafe2e5670" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/charttop5levelratio.py" beforeDir="false" afterPath="$PROJECT_DIR$/charttop5levelratio.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/drawTop5.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/total.xlsx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,5 +63,34 @@
       <updated>1589441439319</updated>
     </task>
     <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1362" height="265" key="GridCell.Tab.0.bottom" timestamp="1589508659627">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1362" height="265" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589508659627" />
+    <state width="1362" height="265" key="GridCell.Tab.0.center" timestamp="1589508659622">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1362" height="265" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589508659622" />
+    <state width="1362" height="265" key="GridCell.Tab.0.left" timestamp="1589508659619">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1362" height="265" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589508659619" />
+    <state width="1362" height="265" key="GridCell.Tab.0.right" timestamp="1589508659623">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1362" height="265" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589508659623" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/chartdescript.py</url>
+          <line>4</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
