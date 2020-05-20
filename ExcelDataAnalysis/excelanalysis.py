@@ -7,9 +7,10 @@ descript:程序入口
 
 import sys
 from excelgetdatas import *
-import charttop5levelratio
+from charttop5levelratio import *
 from chartdescript import *
 from chartfeedbacker import *
+from chartrequestlevel import get_requestleval_piechart
 
 
 if __name__ == "__main__":
@@ -29,12 +30,15 @@ if __name__ == "__main__":
 
 
     # 4.对问题反馈人(Top5)反馈的问题评级占比分析，输出柱形图 ------ 江坚
-    dadaist = charttop5levelratio.data_create(rows)
-    charttop5levelratio.draw_top5(dadaist)
+    dadaist = data_create(rows)
+    draw_top5(dadaist)
 
 	
 	# 5.对问题描述，做数据分析，输出词云图 ------ 丁小永
     get_wordcloud()
+
+    # 6.对问题评级，做数据分析，输出饼图 ------ 纪志昌
+    get_requestleval_piechart()
 
 
     
