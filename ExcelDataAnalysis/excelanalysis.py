@@ -23,7 +23,7 @@ if __name__ == "__main__":
     rows = get_all_excel_data(directory)
 
     # 2.对问题的处理人，做数据分析，输出柱形图 ------ 高国栋
-
+    get_handler()
 
     # 3.对问题的反馈人，做数据分析，输出柱形图 ------ 邱大发
     get_feedbacker_chart()
